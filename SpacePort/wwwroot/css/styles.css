@@ -33,3 +33,20 @@ hr {
   font-size:50px;
   color: yellow;
 }
+
+.port-list a {
+  color:yellow;
+}
+
+.port-list a:visited {
+  color:yellow;
+}
+
+.port-list a:hover {
+  color:lightblue;
+  text-decoration:none;
+}
+
+.create-tags {
+  margin-top:20px;
+}

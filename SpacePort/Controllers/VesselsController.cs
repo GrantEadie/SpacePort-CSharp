@@ -74,7 +74,7 @@ namespace SpacePort.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-    [HttpPost] //vessel search bar functionality
+    [HttpPost]
     public ActionResult Index(string Search)
     {
       List<Vessel> model = _db.Vessels.Include(vessels => vessels.Port).Where(x => x.Description.Contains(Search)).ToList();
