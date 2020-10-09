@@ -2,6 +2,12 @@
   Layout = "_Layout";
 }
 <h1 class="jumbotron">Welcome<br><span style="font-size:small">thank you.</span></h1>
-<button class="btn btn-info">@Html.ActionLink("See All Ports", "Index", "Ports")</button>
-<button class="btn btn-info">@Html.ActionLink("See All Vessels", "Index", "Vessels")</button>
-<button class="btn btn-info">@Html.ActionLink("See All Manifests", "Index", "Manifests")</button>
+<form action="/Ports">
+  <button type="button" class="btn btn-outline-dark">See All Ports</button>
+</form>
+<form action="/Vessels">
+  <button type="button" class="btn btn-outline-dark">See All Currently Docked Vessels</button>
+</form>
+<form action="/Manifests">
+  <button type="button" class="btn btn-outline-dark">See All Manifests for Vessels</button>
+</form>

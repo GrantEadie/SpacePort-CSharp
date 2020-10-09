@@ -5,3 +5,7 @@ a {
 body {
   font-family: 'Cousine', monospace;
 }
+
+form {
+  display:inline; 
+}
