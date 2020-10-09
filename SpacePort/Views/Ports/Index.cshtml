@@ -5,18 +5,20 @@
 @using SpacePort.Models;
 @model List<SpacePort.Models.Port>;
 
-<h1>Ports</h1>
+<h2>Docking Ports</h2>
+<hr>
 
 @if (@Model.Count == 0)
 {
-  <h3>No ports have been added yet!</h3>
+  <p>no ports have been added to this array.</p>
 } 
 
 @foreach (Port port in Model)
 {
-  <li>@Html.ActionLink($"{port.Name}", "Details", new { id = port.PortId })</li>
+  <li class="port-list">@Html.ActionLink($"{port.Name}", "Details", new { id = port.PortId })</li>
 }
-<br>
 
-<Button>@Html.ActionLink("Add new port", "Create")</Button>
+<hr>
+
+<a class="btn btn-outline-light btn-block" href="/Ports/Create">Add new port</a>
 

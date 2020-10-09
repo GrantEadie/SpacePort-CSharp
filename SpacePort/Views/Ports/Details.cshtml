@@ -5,9 +5,8 @@
 @using SpacePort.Models;
 @model SpacePort.Models.Port;
 
-<h2>Port Details</h2>
+<h2>current vessels in <span class="names">@Html.DisplayFor(model => model.Name)</span></h2>
 <hr />
-<h3> @Html.DisplayFor(model => model.Name)</h3>
 
 <ul>
 @if (@Model.Vessels.Count == 0)
