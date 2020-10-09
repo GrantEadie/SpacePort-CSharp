@@ -27,7 +27,7 @@ This application is designed for the Ship Manifest Port Director and due oversig
 
 ## Database Routing
 
-![SQL](space-port.solution/SpacePort/wwwroot/img/SPACEPORT_DATABASE_SQL.png)
+![SQL](SpacePort/wwwroot/img/SPACEPORT_DATABASE_SQL.png)
 
 ## Known Bugs
 
