@@ -4,8 +4,18 @@ a {
 
 body {
   font-family: 'Cousine', monospace;
+  color: white;
+  background-color:black;
+}
+
+.jumbotron {
+  background:transparent !important;
 }
 
 form {
   display:inline; 
+}
+
+.nav {
+  background:transparent;
 }
