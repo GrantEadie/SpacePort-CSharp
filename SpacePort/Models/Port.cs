@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Yelp.Models
+namespace SpacePort.Models
 {
   public class Port
   {

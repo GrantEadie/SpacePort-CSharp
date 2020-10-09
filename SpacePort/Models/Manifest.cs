@@ -1,4 +1,4 @@
-namespace Yelp.Models
+namespace SpacePort.Models
 {
   public class Manifest
   {

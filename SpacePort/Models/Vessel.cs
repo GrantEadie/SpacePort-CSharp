@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 
-namespace Yelp.Models
+namespace SpacePort.Models
 {
   public class Vessel
   {
