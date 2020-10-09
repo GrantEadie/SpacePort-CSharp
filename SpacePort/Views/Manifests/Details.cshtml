@@ -1,0 +1,20 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Yelp.Models.Manifest
+
+<h2>Manifest Details</h2>
+<hr />
+<h3>User Manifests </h3>
+<ul>
+<li>
+  <h4>@Html.DisplayFor(model => model.UserName)</h4>
+  <h5> - "@Html.DisplayFor(model => model.Description)"</h5>
+  <img src="@Html.DisplayFor(model => model.UserImage)" height="50%" width="50%"/>
+</li>
+</ul>
+<button>@Html.ActionLink("Back to list", "Index")</button>
+
+<button>@Html.ActionLink("Edit Manifest", "Edit", new { id = Model.ManifestId })</button>
+<button>@Html.ActionLink("Delete Manifest", "Delete", new { id = Model.ManifestId })</button>

@@ -1,0 +1,30 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Yelp.Models.Vessel
+
+<h2>Edit</h2>
+
+<h4>Edit this task: @Html.DisplayFor(model => model.Description)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.VesselId)
+    
+    <p>Type of Port</p>
+    @Html.DropDownList("PortId")
+    <p>Resturant Name</p>
+    @Html.EditorFor(model => model.Description)
+    <p>image Link of Resturant</p>
+    @Html.EditorFor(model => model.Image)
+    <p>Address of Resturant</p>
+    @Html.EditorFor(model => model.Address)
+
+    @Html.LabelFor(model => model.Port)
+    @Html.DropDownList("PortId")
+
+    <input type="submit" value="Save" />
+}
+<br>
+<Button>@Html.ActionLink("Back to list", "Index")</Button>

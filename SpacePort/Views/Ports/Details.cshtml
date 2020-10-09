@@ -1,0 +1,28 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Yelp.Models;
+@model Yelp.Models.Port;
+
+<h2>Port Details</h2>
+<hr />
+<h3> @Html.DisplayFor(model => model.Name)</h3>
+
+<ul>
+@if (@Model.Vessels.Count == 0)
+{
+  <p>no vessels found</p>
+}
+
+@foreach (Vessel vessel in @Model.Vessels)
+{
+  <li>@Html.ActionLink($"{@vessel.Description}", "Details","Vessels", new { id = vessel.VesselId })</li>
+}
+</ul>
+<hr>
+
+<button>@Html.ActionLink("Back to categories", "Index")</button>
+<button>@Html.ActionLink("Edit Port", "Edit", new { id = Model.PortId })</button>
+<button>@Html.ActionLink("Delete Port", "Delete", new { id = Model.PortId })</button>
+<Button>@Html.ActionLink("Add new vessel", "Create","Vessels")</button>

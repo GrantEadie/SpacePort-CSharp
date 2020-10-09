@@ -1,0 +1,26 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Yelp.Models.Vessel
+
+<h4>Add a new task</h4>
+
+@using (Html.BeginForm())
+{
+    <p>Type of Port</p>
+    @Html.DropDownList("PortId")
+    <p>Resturant Name</p>
+    @Html.TextBoxFor(model => model.Description)
+    <p>image Link of Resturant</p>
+    @Html.TextBoxFor(model => model.Image)
+    <p>Address of Resturant</p>
+    @Html.TextBoxFor(model => model.Address)
+ 
+    <br>
+    <br>
+
+    <input type="submit" value="Add new vessel" class="btn btn-default" />
+}
+<br>
+<Button>@Html.ActionLink("Show all vessels", "Index")</Button>

@@ -1,0 +1,31 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Yelp.Models;
+@model Yelp.Models.Vessel;
+<h2>@Html.DisplayFor(model => model.Description)</h2>
+<h3>@Html.DisplayFor(model => model.Address)</h3>
+
+<img src="@Html.DisplayFor(model => model.Image)" height="50%" width="50%"/>
+
+<ul>
+@if (@Model.Manifests.Count == 0)
+{
+  <p>no Manifests found</p>
+}
+<hr>
+<p style="font-size:20px; margin-left:-40px">Manifests for this vessel</p>
+
+@foreach (Manifest manifest in @Model.Manifests)
+{
+  <li>"@manifest.Description"</li>
+  <small> @manifest.UserName</small>
+}
+</ul>
+<hr>
+
+<Button>@Html.ActionLink("Back to list", "Index")</Button>
+<Button>@Html.ActionLink("Edit Vessel", "Edit", new { id = Model.VesselId })</button>
+<Button>@Html.ActionLink("Delete Vessel", "Delete", new { id = Model.VesselId })</Button>
+<Button>@Html.ActionLink("Add new manifest", "Create","Manifests")</button>

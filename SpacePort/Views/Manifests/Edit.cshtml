@@ -1,0 +1,25 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Yelp.Models.Manifest
+
+<h2>Edit</h2>
+
+<h4>Edit this manifest: @Html.DisplayFor(model => model.Description)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.ManifestId)
+    @Html.LabelFor(model => model.UserName)
+    @Html.EditorFor(model => model.UserName)
+    @Html.LabelFor(model => model.Description)
+    @Html.EditorFor(model => model.Description)
+
+    @Html.LabelFor(model => model.Vessel)
+    @Html.DropDownList("ResaurantId")
+
+    <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to Vessels", "Index")</p>

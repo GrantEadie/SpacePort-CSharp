@@ -1,0 +1,32 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Yelp.Models.Manifest
+
+<h4>Add a new manifest</h4>
+<hr>
+
+@using (Html.BeginForm())
+{
+    <p>Vessel you're manifesting: </p>
+    @Html.DropDownList("VesselId")
+    <br>
+    <br>
+    <p>Enter Your Name</p>
+    @Html.TextBoxFor(model => model.UserName)
+    <br>
+    <h5>Manifest</h5>
+    @Html.TextAreaFor(model => model.Description, new {cols = "55", rows = "10"})
+    <br>  
+    <p>Add Image URL</p>
+    @Html.TextBoxFor(model => model.UserImage)
+    <br>
+    <br>
+
+    
+
+    <input type="submit" value="Add manifest" class="btn btn-default" style="width:40.5%;"/>
+}
+<br>
+@Html.ActionLink("Show all manifests", "Index")
