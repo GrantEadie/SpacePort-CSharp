@@ -1,12 +1,12 @@
 # _Space-Port_
 
-#### _C# ASP.NET MCV Entity Project for Epicodus, October 7, 2020_
+#### _C# ASP.NET MCV Entity Project for Epicodus, October 9, 2020_
 
 #### By _**Grant Eadie**_
 
 ## Description
 
-This application is designed for the Ship Manifest Port Director and due oversight by those in higher ranking order. This is a simple directory of currently moared ships, their cargo, and passengers. The database is provided by mySQL, please see more details about uplading manifest information.
+This application is designed for the Ship Manifest Port Director and due oversight by those in higher ranking order. This is a simple directory of currently moared ships, their cargo, and passengers. The database is provided by mySQL.
 
 ## Setup/Installation Requirements
 
@@ -31,12 +31,13 @@ This application is designed for the Ship Manifest Port Director and due oversig
 
 ## Known Bugs
 
-No Known Bugs
+Search bar in the upper right corner does not function. "Systems" and "Crew" dropdown menus will lead to nowhere. 
 
 ## Technologies Used
 
 Main Programs
 
+- SQL
 - C# / ASP.NET
 - MCV
 - Entity

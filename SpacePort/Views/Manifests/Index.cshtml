@@ -15,7 +15,7 @@
 
 @foreach (Manifest manifest in Model)
 {
-  <li class="manifest-list">@Html.ActionLink($"{manifest.Description}", "Details", new { id = manifest.ManifestId, }) <span style="float:right">@manifest.Vessel.Description || @manifest.UserName</span></li>
+  <li class="manifest-list">@Html.ActionLink($"{manifest.Description}", "Details", new { id = manifest.ManifestId, }) <span style="float:right">@manifest.UserName || <span style="color:orange">@manifest.Vessel.Description</span></span></li>
 }
 <hr>
 
