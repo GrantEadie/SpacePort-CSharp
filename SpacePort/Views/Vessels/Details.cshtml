@@ -4,6 +4,7 @@
 
 @using SpacePort.Models;
 @model SpacePort.Models.Vessel;
+
 <h1 style="color:yellow">@Html.DisplayFor(model => model.Description) <span style="font-size:10px; color:white">showing MANIFEST information</span></h1>
 <h3>ECC: @Html.DisplayFor(model => model.Address)</h3>
 <hr>
@@ -15,7 +16,7 @@
 
 @foreach (Manifest manifest in @Model.Manifests)
 {
-  <li>"@manifest.Description"</li>
+  <li>@manifest.Description</li>
   <small> @manifest.UserName</small>
 }
 </ul>
