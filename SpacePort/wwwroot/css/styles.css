@@ -50,3 +50,16 @@ hr {
 .create-tags {
   margin-top:20px;
 }
+
+.manifest-list a {
+  color:yellow;
+}
+
+.manifest-list a:visited {
+  color:yellow;
+}
+
+.manifest-list a:hover {
+  color:lightblue;
+  text-decoration:none;
+}

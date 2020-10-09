@@ -2,29 +2,41 @@
   Layout = "_Layout";
 }
 
+@using SpacePort.Models;
 @model SpacePort.Models.Vessel
 
-<h2>Edit</h2>
-
-<h4>Edit this task: @Html.DisplayFor(model => model.Description)</h4>
-
-@using (Html.BeginForm())
-{
-    @Html.HiddenFor(model => model.VesselId)
-    
-    <p>Type of Port</p>
-    @Html.DropDownList("PortId")
-    <p>Resturant Name</p>
-    @Html.EditorFor(model => model.Description)
-    <p>image Link of Resturant</p>
-    @Html.EditorFor(model => model.Image)
-    <p>Address of Resturant</p>
-    @Html.EditorFor(model => model.Address)
-
-    @Html.LabelFor(model => model.Port)
-    @Html.DropDownList("PortId")
-
-    <input type="submit" value="Save" />
-}
+<h1>@Html.DisplayFor(model => model.Description)</h1>
+<p>editing vessel</p>
 <br>
-<Button>@Html.ActionLink("Back to list", "Index")</Button>
+
+<div class="row">
+  <div class="col-sm">
+  
+      @using (Html.BeginForm())
+      {
+          @Html.HiddenFor(model => model.VesselId)
+          
+          <p class="create-tags">CURRENT DOCKED PORT:</p>
+          @Html.DropDownList("PortId", null, new {style="width:100%; height:30px; background-color:yellow;"})
+          <p class="create-tags">VESSEL NAME:</p>
+          @Html.TextBoxFor(model => model.Description, new {style="width:100%"})
+          <p class="create-tags">ECC REGISTRY ID:</p>
+          @Html.TextBoxFor(model => model.Address, new {maxlength="4", style="width:100%", onkeyup="this.value = this.value.toUpperCase();"}) 
+
+          <br>
+          <br>
+
+          <input type="submit" value="edit" class="btn btn-outline-light btn-block" />
+      }
+    <br>
+
+    <a href="/Vessels" class="btn btn-outline-light btn-sm"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-square-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm9.5 8.5a.5.5 0 0 0 0-1H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5z"/>
+    </svg></a>
+  </div>
+  <div class="col-sm">
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>
