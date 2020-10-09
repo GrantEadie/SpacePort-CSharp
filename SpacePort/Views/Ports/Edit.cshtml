@@ -2,11 +2,12 @@
   Layout = "_Layout";
 }
 
-@model SpacePort.Models.Port
+@using SpacePort.Models;
+@model SpacePort.Models.Port;
 
-<h2>Edit</h2>
+<h2>Edit @Html.DisplayFor(model => model.Name)</h2>
 
-<h4>Edit this port: @Html.DisplayFor(model => model.Name)</h4>
+<h4>Edit this port:</h4>
 
 @using (Html.BeginForm())
 {

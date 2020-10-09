@@ -15,7 +15,7 @@
 
 @foreach (Vessel vessel in Model)
 {
-  <li class="port-list">@Html.ActionLink($"{vessel.Description}", "Details", new { id = vessel.VesselId }) | @vessel.Port.Name</li>
+  <li class="port-list">@Html.ActionLink($"{vessel.Description}", "Details", new { id = vessel.VesselId }) <span style="float:right">@vessel.Port.Name</span></li>
 }
 <hr>
 <a class="btn btn-outline-light btn-sm btn-block" href="/Vessels/Create">Add new vessel</a>
