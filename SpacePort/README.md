@@ -17,7 +17,7 @@ A website where you judge resturants
   - Run GitBASH in directory
   - Type "dotnet restore" to get bin and obj files
   - Type "dotnet run" in GitBash to run the program
-  - Have fun with Yelp!
+  - Have fun with SpacePort!
 
 - Cloning options
   - For cloning please use the following GitHub [tutorial](https://docs.github.com/en/enterprise/2.16/user/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
@@ -25,7 +25,7 @@ A website where you judge resturants
   - Run GitBASH in directory
   - Type "dotnet restore" to get bin and obj files
   - Type "dotnet run" in GitBash to run the program
-  - Have fun with Yelp!
+  - Have fun with SpacePort!
 
 ## Known Bugs
 
